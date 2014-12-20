@@ -1,0 +1,14 @@
+<h2 id='title'>Welcome to Ember Auth Tutorial</h2>
+
+<ul>
+	<li>
+		{{#if session.isAuthenticated}}
+		  <a {{ action 'invalidateSession' }}>Logout</a>
+		{{else}}
+		  {{#link-to 'login'}}Login{{/link-to}}
+		{{/if}}
+	</li>
+	<li>{{#link-to 'protected'}}Protected{{/link-to}}</li>
+</ul>
+
+{{outlet}}
