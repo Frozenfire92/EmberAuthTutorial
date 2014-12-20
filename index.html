@@ -112,7 +112,7 @@ export default Ember.Route.extend({
 <h3>
 <a id="update-your-templates" class="anchor" href="#update-your-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Update your templates</h3>
 
-<p>See <a href="app/templates">example</a></p>
+<p>See <a href="https://github.com/Frozenfire92/EmberAuthTutorial/tree/master/app/templates">example</a></p>
 
 <h3>
 <a id="get-google-setup" class="anchor" href="#get-google-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get google setup</h3>
@@ -153,15 +153,15 @@ We need the custom provider because the default google-ouath2 uses the code work
 token workflow that the google plus api's need. This code extends <a href="https://github.com/Vestorly/torii/blob/master/lib/torii/providers/oauth2-bearer.js">torii oauth2-bearer</a> and borrows from <a href="https://github.com/Vestorly/torii/blob/master/lib/torii/providers/google-oauth2.js">torri google-oauth2</a>. It also uses jQuery for the GET request, if there is a better way let me know!</p>
 
 <ul>
-<li><a href="app/torii-providers/google-token.js">Custom Provider</a></li>
+<li><a href="https://github.com/Frozenfire92/EmberAuthTutorial/blob/master/app/torii-providers/google-token.js">Custom Provider</a></li>
 </ul>
 
 <p>Then update:</p>
 
 <ul>
 <li>
-<a href="config/environment.js">environment.js</a> torii provider to match the custom providers name (this provider also uses scope <code>profile email</code>)</li>
-<li>Your <a href="app/routes/login.js">login action</a> to match the custom providers name</li>
+<a href="https://github.com/Frozenfire92/EmberAuthTutorial/blob/master/config/environment.js">environment.js</a> torii provider to match the custom providers name (this provider also uses scope <code>profile email</code>)</li>
+<li>Your <a href="https://github.com/Frozenfire92/EmberAuthTutorial/blob/master/app/routes/login.js">login action</a> to match the custom providers name</li>
 </ul>
 
 <p>Then enable the Google+ API in your <a href="https://console.developers.google.com/project">google dev console</a></p>
