@@ -89,7 +89,7 @@ export default Ember.Route.extend({
 
 ### Update your templates
 
-See [example](app/templates)
+See [example](https://github.com/Frozenfire92/EmberAuthTutorial/tree/master/app/templates)
 
 
 
@@ -131,12 +131,12 @@ We are going to create a custom torii provider that will also get the users info
 We need the custom provider because the default google-ouath2 uses the code workflow rather than the
 token workflow that the google plus api's need. This code extends [torii oauth2-bearer](https://github.com/Vestorly/torii/blob/master/lib/torii/providers/oauth2-bearer.js) and borrows from [torri google-oauth2](https://github.com/Vestorly/torii/blob/master/lib/torii/providers/google-oauth2.js). It also uses jQuery for the GET request, if there is a better way let me know!
 
-- [Custom Provider](app/torii-providers/google-token.js)
+- [Custom Provider](https://github.com/Frozenfire92/EmberAuthTutorial/blob/master/app/torii-providers/google-token.js)
 
 Then update:
 
-- [environment.js](config/environment.js) torii provider to match the custom providers name (this provider also uses scope `profile email`)
-- Your [login action](app/routes/login.js) to match the custom providers name
+- [environment.js](https://github.com/Frozenfire92/EmberAuthTutorial/blob/master/config/environment.js) torii provider to match the custom providers name (this provider also uses scope `profile email`)
+- Your [login action](https://github.com/Frozenfire92/EmberAuthTutorial/blob/master/app/routes/login.js) to match the custom providers name
 
 Then enable the Google+ API in your [google dev console](https://console.developers.google.com/project)
 
