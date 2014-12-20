@@ -120,4 +120,24 @@ ENV['torii'] = {
 
 
 ### Test & Enjoy
+
 run `ember server` and try it out!
+
+
+
+### Bonus: Get user info from google
+
+We are going to create a custom torii provider that will also get the users information from google.
+We need the custom provider because the default google-ouath2 uses the code workflow rather than the
+token workflow that the google plus api's need. This code extends [torii oauth2-bearer](https://github.com/Vestorly/torii/blob/master/lib/torii/providers/oauth2-bearer.js) and borrows from [torri google-oauth2](https://github.com/Vestorly/torii/blob/master/lib/torii/providers/google-oauth2.js). It also uses jQuery for the GET request, if there is a better way let me know!
+
+- [Custom Provider](app/torii-providers/google-token)
+
+Then update:
+
+- [environment.js](config/environment.js) torii provider to match the custom providers name (this provider also uses scope `profile email`)
+- Your [login action](app/routes/login.js) to match the custom providers name
+
+Then enable the Google+ API in your [google dev console](https://console.developers.google.com/project)
+
+You now will have access to `session.content.userName` and `session.content.userEmail`
